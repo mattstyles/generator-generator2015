@@ -53,7 +53,7 @@ export default class UrbanGenerator extends Base {
     }
 
     prompting() {
-        if ( !this.options[ 'skip-install' ] ) {
+        if ( this.options[ 'skip-prompt' ] ) {
             this.log( 'Skipping prompt' )
             this.props = {
                 projectName: 'debug-project',
@@ -98,6 +98,17 @@ export default class UrbanGenerator extends Base {
                 })
 
             done()
+        })
+    }
+
+    install() {
+        if ( this.options[ 'skip-install' ] ) {
+            this.log( 'Skipping install' )
+            return
+        }
+
+        this.installDependencies({
+            bower: false
         })
     }
 }
