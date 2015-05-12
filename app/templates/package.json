@@ -1,8 +1,7 @@
 {
   "name": "{{ projectName }}",
   "version": "0.0.0",
-  "description": "Yeoman generator for a babel and react web client",
-  "main": "index.js <%= projectName %>",
+  "description": "{{ projectDescription }}",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel-node ./build.js",
@@ -12,9 +11,9 @@
   },
   "keywords": [
     "yeoman",
-    "react",
+    "generator",
     "babel",
-    "less"
+    "es2015"
   ],
   "author": "{{ authorName }}",
   "license": "WTFPL",
