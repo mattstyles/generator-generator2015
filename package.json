@@ -1,6 +1,6 @@
 {
   "name": "generator-generator2015",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator to scaffold a yeoman generator, oh no I've gone cross-eyed",
   "main": "index.js",
   "scripts": {
