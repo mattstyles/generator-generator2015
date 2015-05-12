@@ -1,8 +1,8 @@
 {
-  "name": "generator-urban-webclient",
+  "name": "{{ projectName }}",
   "version": "0.0.0",
   "description": "Yeoman generator for a babel and react web client",
-  "main": "index.js",
+  "main": "index.js <%= projectName %>",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel-node ./build.js",
@@ -16,7 +16,7 @@
     "babel",
     "less"
   ],
-  "author": "Matt Styles",
+  "author": "{{ authorName }}",
   "license": "WTFPL",
   "dependencies": {
     "chalk": "^1.0.0",

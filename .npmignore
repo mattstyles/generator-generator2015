@@ -2,4 +2,5 @@
 .eslintrc
 .travis.yml
 build.js
-spec
+app/__test__
+app/_index.js
