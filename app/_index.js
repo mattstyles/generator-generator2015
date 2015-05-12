@@ -53,6 +53,8 @@ export default class UrbanGenerator extends Base {
     }
 
     prompting() {
+        var done = this.async()
+
         if ( this.options[ 'skip-prompt' ] ) {
             this.log( 'Skipping prompt' )
             this.props = {
@@ -61,11 +63,12 @@ export default class UrbanGenerator extends Base {
                 authorName: 'Arthur Debug',
                 userName: 'adebug'
             }
-            return
+            return done()
         }
 
         this.prompt( UrbanGenerator.prompts, props => {
             this.props = props
+            done()
         })
     }
 
