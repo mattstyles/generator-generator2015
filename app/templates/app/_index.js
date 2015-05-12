@@ -74,7 +74,7 @@ export default class UrbanGenerator extends Base {
 
         this.log( 'Copying templates' )
 
-        glob( path.join( this.sourceRoot(), '**/*' ), {
+        glob( path.join( this.sourceRoot(), '*' ), {
             dot: true
         }, ( err, files ) => {
             if ( err ) {
