@@ -10,7 +10,7 @@ import { watch } from 'chokidar'
 import * as babel from 'babel'
 
 let argv = minimist( process.argv.slice( 2 ) )
-let globPath = './**/_index.js'
+let globPath = './app/_index.js'
 let mode = 'build'
 
 /**
