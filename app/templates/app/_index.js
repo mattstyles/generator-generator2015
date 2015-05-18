@@ -53,6 +53,8 @@ export default class UrbanGenerator extends Base {
     }
 
     prompting() {
+        let done = this.async()    
+
         if ( this.options[ 'skip-prompt' ] ) {
             this.log( 'Skipping prompt' )
             this.props = {
@@ -61,11 +63,12 @@ export default class UrbanGenerator extends Base {
                 authorName: 'Arthur Debug',
                 userName: 'adebug'
             }
-            return
+            return done()
         }
 
         this.prompt( UrbanGenerator.prompts, props => {
             this.props = props
+            done()
         })
     }
 
@@ -74,7 +77,7 @@ export default class UrbanGenerator extends Base {
 
         this.log( 'Copying templates' )
 
-        glob( path.join( this.sourceRoot(), '*' ), {
+        glob( path.join( this.sourceRoot(), '**/*' ), {
             dot: true
         }, ( err, files ) => {
             if ( err ) {
